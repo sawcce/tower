@@ -2,14 +2,14 @@
 
 Tower is an esoteric language meaning it is designed to be fun to use or a headache to program in !
 
--[Main](#tower)
--[Concept](#concept)
--[Navigation](#navigation)
--[Manipulations](#manipulation)
--[Messages](#messages)
--[Data types](#data-types)
--[Closures](#closures)
--[Commands](#commands)
+- [Main](#tower)
+- [Concept](#concept)
+- [Navigation](#navigation)
+- [Manipulations](#manipulation)
+- [Messages](#messages)
+- [Data types](#data-types)
+- [Closures](#closures)
+- [Commands](#commands)
 
 ## Concept
 
