@@ -1,8 +1,0 @@
-pixels = __img.getPixels()
-
-for [x, y] in [pixels.height, pixels.width] {
-    pixel = __img.getPixel(x, y)
-    [r,g,b] = pixel.getRGB()
-    [r,g,b] = moy(r,g,b)
-    pixel = 
-}
