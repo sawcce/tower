@@ -32,9 +32,10 @@ class Table {
     this.data[this.cursor.x] = newCol;
   }
 
-  get() {
+  get(off = 0) {
     if (this.data[this.cursor.x] == undefined) this.data[this.cursor.x] = [];
-    return this.data[this.cursor.x][this.cursor.y] || [];
+    let data = this.data[this.cursor.x][this.cursor.y + off];
+    return data != undefined ? data : [];
   }
 
   getColumn() {
@@ -170,6 +171,20 @@ class Interpreter {
             resolve();
           });
           break;
+        case "x":
+          console.log(this.table.data);
+          resolve();
+          break;
+        case "cmp":
+          this.table.down();
+          let x_val = this.table.get();
+          let x_val1 = this.table.get(1);
+
+          this.table.collapseCursor();
+          this.table.setColumn([]);
+          this.table.set(x_val == x_val1 ? 0 : 1);
+          resolve();
+          break;
         case "get":
           this.clipboard = this.table.get();
           resolve();
@@ -181,7 +196,7 @@ class Interpreter {
         case "say":
           switch (typeof val) {
             case "number":
-              console.log(val);
+              console.log(val.toString());
               break;
             case "object":
               let fn = "";

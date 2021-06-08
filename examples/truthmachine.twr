@@ -1,0 +1,14 @@
+>   [48 @ say] <
+>>  [> 49 @ say < exe] <<
+
+    ask num
+^   0
+
+cmp
+
+^   1
++
+
+say
+rig
+exe
