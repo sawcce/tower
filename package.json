@@ -1,0 +1,19 @@
+{
+  "name": "tower-lang",
+  "version": "0.0.1",
+  "description": "A quirky esolang that mixes brainfuck and stacks in a extended way",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "chevrotain": "^9.0.1",
+    "yargs": "^17.0.1"
+  },
+  "bin": {
+    "tlang": "./bin/index.js"
+  }
+}
