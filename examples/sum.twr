@@ -1,0 +1,4 @@
+        ask num
+    ^   ask num
+    +
+    say

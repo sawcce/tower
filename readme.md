@@ -2,15 +2,22 @@
 
 Tower is an esoteric language meaning it is designed to be fun to use or a headache to program in !
 
+-[Main](#tower)
+-[Concept](#concept)
+-[Navigation](#navigation)
+-[Manipulations](#manipulation)
+-[Messages](#messages)
+-[Data types](#data-types)
+-[Closures](#closures)
+-[Commands](#commands)
+
 ## Concept
 
 Tower handles data via an array of "Towers" these towers are actually array that you can navigate through
 
 You can use different operation to reduce these towers into a single cell containing for example a message, action or number.
 
-## Core Commands
-
-### Navigation
+## Navigation
 
 < To select the tower on your left 
 
@@ -22,7 +29,7 @@ v To select the row under you
 
 lef / rig which I'll cover later on
 
-### Manipulation
+## Manipulation
 
 The basic operations are present as manipulations that you can execute on the towers
 
@@ -57,7 +64,7 @@ would give
     | 0.2 |
     |=====|
 
-### Messages
+## Messages
 
 The operator @ on the other hand, even it collapses the tower, it does it in a more intricate way: when using it, it will transform the first of the tower into a message
 
@@ -104,9 +111,9 @@ This simple program defines a program that has a closure printing the word "Towe
 
 Say : Prints the current selected cell to the console
 
-Lef : Goes <the value in the current cell> times to the left
+Lef : Goes -the value in the current cell- times to the left
 
-Rig : Goes <the value in the current cell> times to the right
+Rig : Goes -the value in the current cell- times to the right
 
 Exe : Executes the closure in the current selected cell
 
@@ -126,6 +133,21 @@ Say : Says the value of the current cell
 ## Examples
 
 For more examples check the directory examples
+
+    # Calculates and says the sum of two entered numbers
+
+        ask num
+    ^   ask num
+    +
+    say
+
+
+    # Concatenates and says two messages
+
+        ask
+    ^   ask
+    @
+    say
 
 
 
