@@ -145,9 +145,11 @@ class Interpreter {
           resolve();
           break;
         case "exe":
-          let ast = this.body;
-          this.body = this.table.get().body;
-          this.interpret();
+          if (typeof this.table.get() == "object") {
+            let ast = this.body;
+            this.body = this.table.get().body;
+            this.interpret();
+          }
           resolve();
           break;
         case "cur":
@@ -194,6 +196,7 @@ class Interpreter {
           resolve();
           break;
         case "say":
+          //console.log(val);
           switch (typeof val) {
             case "number":
               console.log(val.toString());
